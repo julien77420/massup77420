@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massup</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    
+</head>
+
+<body>
+
+<div class="app">
+
+    <h1>Massup</h1>
+
+    <main>
+
+        <!-- ACCUEIL -->
+        <section id="accueil" class="page active">
+            <h2>🏠 Accueil</h2>
+
+            <div class="dashboard">
+
+                <div class="stat-card">
+                    <span>⚖️ Poids actuel</span>
+                    <strong id="currentWeight">61 kg</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>🎯 Objectif</span>
+                    <strong>65 kg</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>📊 Progression</span>
+                    <strong id="progressText">0 %</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>➕ À prendre</span>
+                    <strong id="remainingWeight">4 kg</strong>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <h3>Ma progression</h3>
+
+                <div class="progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Ajouter mon poids</h3>
+
+                <input
+                    type="number"
+                    id="weightInput"
+                    placeholder="Ex : 63.5"
+                    step="0.1"
+                >
+
+                <button onclick="addWeight()">Enregistrer</button>
+            </div>
+        </section>
+
+
+        <!-- PROGRESSION -->
+        <section id="progression" class="page">
+            <h2>📈 Progression</h2>
+
+            <div class="card">
+                <h3>Mon évolution</h3>
+                <p>Ton graphique de poids sera affiché ici.</p>
+            </div>
+
+            <div class="card">
+                <h3>Historique</h3>
+                <div id="historyList">
+                    <p>Aucune mesure enregistrée.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- NUTRITION -->
+        <section id="nutrition" class="page">
+            <h2>🍽️ Nutrition</h2>
+
+            <div class="card">
+                <h3>Ma nutrition</h3>
+                <p>Calories</p>
+                <p>Protéines</p>
+                <p>Glucides</p>
+                <p>Lipides</p>
+            </div>
+        </section>
+
+
+        <!-- SPORT -->
+        <section id="entrainement" class="page">
+            <h2>💪 Entraînement</h2>
+
+            <div class="card">
+                <h3>Mes séances</h3>
+                <p>Ton entraînement sera affiché ici.</p>
+            </div>
+        </section>
+
+
+        <!-- PROFIL -->
+        <section id="profil" class="page">
+            <h2>👤 Profil</h2>
+
+            <div class="card">
+                <h3>Mes informations</h3>
+                <p>Poids de départ : 61 kg</p>
+                <p>Objectif : 65 kg</p>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- MENU DU BAS -->
+    <nav class="navigation">
+
+        <button onclick="showPage('accueil')">
+            🏠<br>
+            Accueil
+        </button>
+
+        <button onclick="showPage('progression')">
+            📈<br>
+            Progression
+        </button>
+
+        <button onclick="showPage('nutrition')">
+            🍽️<br>
+            Nutrition
+        </button>
+
+        <button onclick="showPage('entrainement')">
+            💪<br>
+            Sport
+        </button>
+
+        <button onclick="showPage('profil')">
+            👤<br>
+            Profil
+        </button>
+
+    </nav>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
