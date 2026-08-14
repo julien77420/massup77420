@@ -6,7 +6,6 @@
     <title>Massup</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
-    
 </head>
 
 <body>
@@ -70,49 +69,229 @@
 
         <!-- PROGRESSION -->
         <section id="progression" class="page">
+
             <h2>📈 Progression</h2>
 
             <div class="card">
                 <h3>Mon évolution</h3>
-                <p>Ton graphique de poids sera affiché ici.</p>
+                <p>Ton évolution vers 65 kg sera affichée ici.</p>
             </div>
 
             <div class="card">
                 <h3>Historique</h3>
+
                 <div id="historyList">
                     <p>Aucune mesure enregistrée.</p>
                 </div>
             </div>
+
         </section>
 
 
         <!-- NUTRITION -->
         <section id="nutrition" class="page">
+
             <h2>🍽️ Nutrition</h2>
+            <p>Aliments pour ma prise de poids</p>
 
             <div class="card">
-                <h3>Ma nutrition</h3>
-                <p>Calories</p>
-                <p>Protéines</p>
-                <p>Glucides</p>
-                <p>Lipides</p>
+                <h3>🥩 Viandes & protéines</h3>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Poulet
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Dinde
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Steak haché
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Bœuf
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Échine de porc
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Thon
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Œufs
+                </label>
+
             </div>
+
+
+            <div class="card">
+                <h3>🍚 Féculents & glucides</h3>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Riz
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Pâtes
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Pommes de terre
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Patate douce
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Pain de mie
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Flocons d’avoine
+                </label>
+
+            </div>
+
+
+            <div class="card">
+                <h3>🥑 Matières grasses</h3>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Avocat
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Beurre de cacahuète
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Huile d’olive
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Amandes
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Noix
+                </label>
+
+            </div>
+
+
+            <div class="card">
+                <h3>🥛 Sans lactose</h3>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Lait sans lactose
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Yaourt sans lactose
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Fromage sans lactose
+                </label>
+
+            </div>
+
+
+            <div class="card">
+                <h3>🍌 Fruits & légumes</h3>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Bananes
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Pommes
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Haricots verts
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Brocolis
+                </label>
+
+                <label class="food">
+                    <input type="checkbox">
+                    Carottes
+                </label>
+
+            </div>
+
         </section>
 
 
         <!-- SPORT -->
+         <div class="card">
+    <h3>🛒 Ma liste de courses</h3>
+    <input
+    type="text"
+    id="newFood"
+    placeholder="Ex : saumon, riz, banane..."
+>
+
+<button onclick="addFood()">
+    ➕ Ajouter un aliment
+</button>
+
+
+
+    <button onclick="showShoppingList()">
+        Voir mes aliments sélectionnés
+    </button>
+
+    <div id="shoppingList"></div>
+</div>
         <section id="entrainement" class="page">
+
             <h2>💪 Entraînement</h2>
 
             <div class="card">
                 <h3>Mes séances</h3>
                 <p>Ton entraînement sera affiché ici.</p>
             </div>
+
         </section>
 
 
         <!-- PROFIL -->
         <section id="profil" class="page">
+
             <h2>👤 Profil</h2>
 
             <div class="card">
@@ -120,12 +299,13 @@
                 <p>Poids de départ : 61 kg</p>
                 <p>Objectif : 65 kg</p>
             </div>
+
         </section>
 
     </main>
 
 
-    <!-- MENU DU BAS -->
+    <!-- MENU -->
     <nav class="navigation">
 
         <button onclick="showPage('accueil')">
